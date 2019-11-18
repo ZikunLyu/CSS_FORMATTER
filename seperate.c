@@ -5,25 +5,30 @@ void read(char *filename, FILE *rfp, FILE *wfp);
 void write(char * filename, char c, FILE *wfp);
 
 int main(void) {
+    char file[30];
+    printf("Enter the css file name you want to format with: (include the .css) ");
+    scanf("%s", file);
+    
+    //char file[] = "app.min.css";
 	FILE *rfp;
     FILE *wfp;
-	read("app.min.css", rfp, wfp);
+	read(file, rfp, wfp);
 	return 0;
 }
 
 void read(char *filename, FILE* rfp, FILE *wfp) {
 	char c;
-	printf("Opening the file in read mode");
+	printf("Opening the file in read mode \n");
 
 	rfp = fopen(filename, "r");
     wfp = fopen("formatted.css","w");
 
 	if (rfp ==  NULL) {
-		printf("Could not open file");
+		printf("Could not open file \n");
         return;
 	}
 
-	printf("Reading the file");
+	printf("Reading the file \n");
 	while (1) {
 		c = fgetc(rfp);
 		if (c == EOF) {
@@ -33,7 +38,7 @@ void read(char *filename, FILE* rfp, FILE *wfp) {
 		//printf ( "%c", c ) ;
 
 	}
-	printf("Closing the file test.c") ;
+	printf("Closing the file test.c \n") ;
 	fclose(rfp);
     fclose(wfp);
 }
