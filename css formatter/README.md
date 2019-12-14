@@ -6,3 +6,5 @@ If you find some fancy websites or webpages, and their css files are massive, us
 2. Run this cssformatter.c file and typein the file name you want to format wth (ending with .css)
 3. A file called formatted.css will be generated automatically
 4. You are all set
+
+You still could use Chrome Extension called "JavaScript and CSS Code Beautifier" which could beautify both CSS and JS LOL!!!
